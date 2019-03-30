@@ -1,0 +1,22 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class dropdown {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\JAVA_Learn\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://pastebin.com/");
+		Thread.sleep(2000L);
+		Select s= new Select (driver.findElement(By.xpath("//form[@id='myform']/div[3]/div[2]/div[2]/select")));
+		
+		s.selectByValue("10M");
+		
+
+
+	}
+
+}
